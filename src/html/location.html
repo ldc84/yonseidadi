@@ -1,0 +1,70 @@
+<!-- @@master = /template/master.html {"title":""} -->
+
+<!-- @@block = contents -->
+<div id="location">
+  <div class="sub-visual location">
+    <h2>
+      오시는 길
+      <span><strong>YONSEIMADI</strong> NEUROSURGERY</span>
+    </h2>
+  </div>
+  <div class="container">
+    <h3 class="title-type-1"><span><strong>연세마디 신경외과</strong> 오시는 길</span></h3>
+    <p class="title-coment">환자분께 안정과 편안함을 제공하고자 작은 곳까지 쾌적하고 청결한 내부로 제작되었습니다</p>
+    <div class="location-info">
+      <div class="map" id="map"></div>
+      <ul class="info">
+        <li>
+          <p class="tit">
+            <span><img src="./images/location_icon01.png" alt=""></span>
+            대구 달성군 유가읍 테크노상업로 98
+          </p>
+        </li>
+        <li>
+          <p class="tit">
+            <span><img src="./images/location_icon02.png" alt=""></span>
+            035-614-5355
+          </p>
+        </li>
+        <li>
+          <p class="tit">주변버스정류장</p>
+          <p class="txt">
+            <span>유가면사무소건너 (02-829)</span>
+            <span>유가면사무소앞 (02-832)</span>
+            <span>현풍경남은행건너 (03-980)</span>
+          </p>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+<script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b21d0936cebb424b025634ef5e5be781&libraries=services"></script>
+<script>
+  window.addEventListener('load', function(){
+    // 현재 페이지 메뉴 활성화
+    $('#gnb ul li').eq(3).addClass('active');
+    var latlng = new kakao.maps.LatLng(35.693286, 128.460127);
+
+    // 지도에 마커생성
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = { 
+          center: latlng, // 지도의 중심좌표
+          level: 3 // 지도의 확대 레벨
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+    // 마커가 표시될 위치입니다 
+    var markerPosition  = latlng; 
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+      position: markerPosition
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+  });
+</script>
+<!-- @@close -->

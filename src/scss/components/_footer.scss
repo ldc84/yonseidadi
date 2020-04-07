@@ -1,0 +1,69 @@
+// page footer
+footer {
+  height:239px;
+  padding:84px 0 0 13%;
+  background-color:#2f2e2e;
+  > div {
+    color:#a09d9d;
+    font-size:rem(18);
+    font-weight:500;
+    line-height:26px;
+    address {
+      display: inline;
+      color:#a09d9d;
+      font-size:rem(18);
+      font-style:normal;
+    }
+    address + span,
+    span + span {
+      position:relative;
+      margin-left:10px;
+      padding-left:17px;
+      &:before {
+        content:'';
+        display:block;
+        position:absolute;
+        top:7px;
+        left:0;
+        width:1px;
+        height:15px;
+        background-color:#545454;
+      }
+    }
+    &.copy {
+      font-weight:300;
+    }
+  }
+
+  // mobile
+  @include mediaQuery($deviceSmall){
+    height:150px;
+    padding:50px 0 0 27px;
+    > div {
+      font-size:rem(9);
+      line-height:1.4;
+      address {
+        font-size:rem(9);
+      }
+      address + span,
+      span + span {
+        position:relative;
+        margin-left:6px;
+        padding-left:8px;
+        &:before {
+          content:'';
+          top:5px;
+          height:7px;
+        }
+      }
+      address + span {
+        display:inline-block;
+        margin-left:0;
+        padding-left:0;
+        &:before {
+          display:none;
+        }
+      }
+    }
+  }
+}

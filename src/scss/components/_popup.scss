@@ -1,0 +1,25 @@
+// layer gallery
+.layer-gallery {
+  position:fixed;
+  top:50%;
+  left:50%;
+  width:840px;
+  background-color:#fff;
+  transform: translate(-50%, -50%);
+  z-index:16;
+  .image {
+    padding:20px 25px 20px 25px;
+    img {
+      width:100%;
+      vertical-align: top;
+    }
+  }
+  .close {
+    position:absolute;
+    top:-55px;
+    right:0;
+    width:55px;
+    height:55px;
+    background:url("../images/pop_close.png") no-repeat center center;
+  }
+}
