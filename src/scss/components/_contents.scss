@@ -23,9 +23,72 @@
       }
     }
   }
+  .intro-member {
+    .title-type-1 {
+      margin-top:150px;
+    }
+    .photo-info {
+      margin-top:120px;
+      padding:0 30px;
+      @include clear;
+      .photo {
+        float:left;
+        width:555px;
+        img {
+          box-shadow:10px 17px 0 0 #ffe6c9;
+        }
+      }
+      .info {
+        float:right;
+        width:625px;
+        h4 {
+          color:#000;
+          font-size:rem(40);
+          span {
+            display:block;
+            font-size:rem(15);
+          }
+          strong {
+            font-weight:700;
+          }
+        }
+        li {
+          display:flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          width:100%;
+          margin-top:50px;
+          color:#000;
+          font-size:rem(20);
+          line-height:1.5;
+          .tit {
+            position:relative;
+            width:100%;
+            padding:0 0 20px 12px;
+            color:#000;
+            font-size:rem(25);
+            font-weight:700;
+            &:before {
+              content:'';
+              display:block;
+              position:absolute;
+              top:5px;
+              left:0;
+              width:5px;
+              height:22px;
+              background-color:$color-point;
+            }
+          }
+          > div {
+            width:50%;
+          }
+        }
+      }
+    }
+  }
   .intro-text01 {
     height:563px;
-    margin-top:115px;
+    margin-top:145px;
     background:url("../images/intro_bg01.jpg") no-repeat center center;
     background-size:cover;
     .container {
@@ -81,6 +144,50 @@
       }
       .tit {
         font-size:rem(18);
+      }
+    }
+    .intro-member {
+      .title-type-1 {
+        margin-top:55px;
+      }
+      .photo-info {
+        margin-top:50px;
+        padding:0 12px;
+        .photo {
+          width:50%;
+          img {
+            width:86%;
+            box-shadow:5px 8px 0 0 #ffe6c9;
+          }
+        }
+        .info {
+          width:50%;
+          h4 {
+            font-size:rem(19);
+            span {
+              font-size:rem(8);
+            }
+          }
+          li {
+            margin-top:20px;
+            font-size:rem(10);
+            .tit {
+              padding:0 0 5px 6px;
+              font-size:rem(11);
+              &:before {
+                top:2px;
+                width:2px;
+                height:10px;
+              }
+            }
+            > div {
+              width:100%;
+              & + div {
+                margin-top:5px;
+              }
+            }
+          }
+        }
       }
     }
   }
